@@ -1,4 +1,4 @@
-import React, { ReactChildren } from "react"
+import React, { ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -6,7 +6,7 @@ import Footer from "./footer"
 import "../styles/tailwind.css"
 
 interface LayoutProps {
-  children: ReactChildren
+  children: ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
