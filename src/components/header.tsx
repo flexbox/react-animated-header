@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+
 import LogoIcon from "../../assets/forum-logo-dots.svg"
 import LogoText from "../../assets/forum-logo-text.svg"
 import ProfileIcon from "../../assets/profile.svg"
@@ -49,7 +49,7 @@ function Search() {
   )
 }
 
-function Navigation({ allLinks: LinksProps }) {
+function Navigation({ allLinks }: LinksProps) {
   return (
     <div className="hidden md:flex px-4 sm:px-6 lg:px-8 py-3">
       <a
@@ -73,10 +73,13 @@ function Navigation({ allLinks: LinksProps }) {
   )
 }
 
-function NavigationMobile(
-  { isMenuOpen, allLinks },
-  { isMenuOpen: boolean, allLinks: [] }
-) {
+function NavigationMobile({
+  isMenuOpen,
+  allLinks,
+}: {
+  isMenuOpen: boolean
+  allLinks: LinksProps | any
+}) {
   return (
     <>
       <div className={`${isMenuOpen ? "translate-x-5" : "hidden"} md:hidden`}>
@@ -142,6 +145,7 @@ function Header({ siteTitle }: HeaderProps) {
                 </svg>
               </button>
             </div>
+            <div className="sr-only">{siteTitle}</div>
             <div className="flex-shrink-0 flex items-center">
               <div className="block lg:hidden h-8 w-auto">
                 <LogoIcon />
@@ -167,7 +171,7 @@ function Header({ siteTitle }: HeaderProps) {
         </div>
 
         <Navigation allLinks={allLinks} />
-        <NavigationMobile allLinks={allLinks} isMenuOpen={isMenuOpen} />
+        <NavigationMobile isMenuOpen={isMenuOpen} allLinks={allLinks} />
       </div>
     </nav>
   )
