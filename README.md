@@ -13,7 +13,6 @@ yarn
 yarn start
 ```
 
-You can now view docs in the browser [http://localhost:8000/](http://localhost:8000/)
+You can now view docs in the browser [`http://localhost:8000/`](http://localhost:8000/)
 
-⠀
 View GraphiQL, to explore your site's data and schema [`http://localhost:8000/___graphql`](http://localhost:8000/___graphql)
