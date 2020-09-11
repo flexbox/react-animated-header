@@ -21,13 +21,21 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#04a0ff`,
+        theme_color: `#04a0ff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `assets/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-typescript",
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 }

@@ -2,6 +2,7 @@ import React, { ReactChildren } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "../styles/tailwind.css"
 
 interface LayoutProps {
@@ -23,14 +24,9 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="bg-gray-100">
-        <h1 className="text-3xl">This is a 3xl text</h1>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <main className="max-w-6xl mx-auto">{children}</main>
       </div>
+      <Footer />
     </>
   )
 }
