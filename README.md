@@ -1,7 +1,5 @@
 # react-animated-header
 
->
-
 ## Tooling
 
 - Pages generated with `Gatsby`
@@ -16,5 +14,6 @@ yarn start
 ```
 
 You can now view docs in the browser [http://localhost:8000/](http://localhost:8000/)
+
 ⠀
 View GraphiQL, to explore your site's data and schema [`http://localhost:8000/___graphql`](http://localhost:8000/___graphql)
