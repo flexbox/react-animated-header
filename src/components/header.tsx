@@ -24,6 +24,8 @@ const allLinks = [
   { title: "Debate Y" },
   { title: "Debate Z" },
   { title: "Debate A" },
+  { title: "Debate B" },
+  { title: "Debate C" },
 ]
 
 function Search() {
@@ -146,12 +148,15 @@ function Header({ siteTitle }: HeaderProps) {
               </button>
             </div>
             <div className="sr-only">{siteTitle}</div>
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex items-center">
               <div className="block lg:hidden h-8 w-auto">
                 <LogoIcon />
               </div>
               <div className="hidden lg:block h-8 w-auto">
-                <LogoText />
+                <div className="flex flex-row">
+                  <LogoIcon />
+                  <LogoText />
+                </div>
               </div>
             </div>
           </div>
